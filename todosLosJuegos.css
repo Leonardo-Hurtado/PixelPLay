@@ -1,0 +1,161 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Asegura que las imágenes no excedan el contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos del encabezado */
+header {
+    background: linear-gradient(90deg, #222, #2c2c2c);
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+.nav-link {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    background-size: 400% 400%;
+    display: inline-block;
+    text-align: center;
+    animation: gradient 3s ease infinite;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    transform: scale(1.05);
+}
+
+/* Estilos del área principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #1b1b1b;
+}
+
+/* Estilos de la barra de búsqueda */
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 8px 0 0 8px;
+    background-color: #333;
+    color: #f4f4f4;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    border: 1px solid #555;
+    border-left: none;
+    background: linear-gradient(45deg, #b49ee7, #D4A5FF, #A5D8FF, #D4A5FF);
+    background-size: 400% 400%;
+    color: #f4f4f4;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    animation: gradient 3s ease infinite;
+    transition: transform 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: linear-gradient(45deg, #D4A5FF, #A5D8FF, #D4A5FF);
+    transform: scale(1.05);
+}
+
+/* Estilos de la rejilla de juegos */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 25px;
+    border-top: 2px solid #D4A5FF;
+}
+
+/* Estilo de las tarjetas de juego */
+.game-card {
+    position: relative;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Asegura que todas las imágenes en las tarjetas tengan el mismo tamaño */
+.game-card img {
+    width: 100%; /* Ajusta el ancho para que se adapte al contenedor */
+    height: 250px; /* Ajusta la altura para mantener las imágenes del mismo tamaño */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformar */
+    border-bottom: 2px solid #A5D8FF; /* Cambia el borde inferior para las imágenes */
+}
+
+.game-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 16px;
+    color: #D4A5FF;
+    margin-top: 10px;
+}
+
+/* Estilos del pie de página */
+footer {
+    background: linear-gradient(90deg, #222, #2c2c2c);
+    color: #f4f4f4;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Animación del gradiente */
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Estilo para la tarjeta seleccionada (si decides añadir una clase de selección en el futuro) */
+.game-card.selected {
+    border: 2px solid #D4A5FF; /* Cambia el borde de la tarjeta seleccionada */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
